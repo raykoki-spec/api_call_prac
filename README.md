@@ -2,15 +2,17 @@
 
 # API Requests Demo
 
-Python-based API calls that demonstrates how the request-response cycle works.
+Python-based API calls that demonstrates how the request-response cycle works across different APIs.
 In these API calls, specific values are pulled out of the JSON response and displayed clearly.
+APIs used in this demo include: - REST Countries
+                                - Email Intelligence 
 
 ## What It Does
 
-- The user sends request to the API address(URL)
+- Sends request to the API address(URL)
 - The server receives the request, runs its logic and then prepares the response
 - User receives the response in form of JSON
-- Formats a clear report
+- Formats a clear readable output
 
 
 ## Setup
@@ -22,8 +24,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```python
- ``rest countries
-
+ ``REST Countries
  if response.status_code == 200 and "data" in body:
     country = body["data"]["objects"][0]
 
@@ -34,8 +35,7 @@ pip install -r requirements.txt
     print(f"Capital: {capital}")
 
 
-``email api
-
+``Email Intelligence
 if response.status_code == 200 and "data" in body:
     email_info = body["data"]["objects"][0]
 
@@ -49,19 +49,13 @@ if response.status_code == 200 and "data" in body:
 ## Sample Output
 
 ```
-#rest countries
-
+#REST Countries
 Country: Kenya
 Capital: Nairobi
 
-
-#email api
-
+``Email Intelligence
 Email Address: raykokike@gmail.com
 Domain: Google
-
-
-
 ```
 
 ## Stack
